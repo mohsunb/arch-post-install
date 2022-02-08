@@ -122,6 +122,11 @@ git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
 ```
 Run ```Tweaks```, go to ```Appearance```. Click on ```Applications``` drop down menu and select ```WhiteSur-dark```. Click on ``Icons`` drop down menu and select ```La-Sierra```.
 
+## Slideshow wallpapers:
+```
+sudo pacman -S shotwell
+```
+
 ## Advanced screenshot tool - ```Flameshot```:
 ```
 sudo pacman -S flameshot
