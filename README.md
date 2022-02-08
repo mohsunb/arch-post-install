@@ -3,7 +3,7 @@
 ## Select a language if unable to open Terminal:
 Open ```Settings```, go to ```Region and Language```, click ```Language``` and select ```English```.
 
-## Enable Multilib repository:
+## Enable ```Multilib``` repository:
 Edit ```/etc/pacman.conf``` and uncomment:
 ```
 [multilib]
@@ -35,7 +35,7 @@ Section "Device"
 EndSection
 ```
 
-## Install AUR packages:
+## Install ```AUR``` packages:
 ```
 sudo pacman -S base-devel
 ```
@@ -54,3 +54,54 @@ cd .. | rm -rf yay
 ```
 
 Now use ```yay -S PACKAGE_NAME``` to install AUR packages.
+
+## Make terminal transparent:
+
+```
+yay -S gnome-terminal-transparency
+```
+
+Open ```Terminal```. Click three dots, ```Preferences```. Select your profile. Go to ```Colors``` and tick ```Transparent background```. Use the slider to adjust transparency.
+
+## Install ```Z-Shell```, ```Oh-My-Zsh``` and ```Starship Prompt```:
+```
+sudo pacman -S zsh
+```
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+```
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+```
+Edit ```~/.zshrc``` and append:
+```
+eval "$(starship init zsh)"
+
+```
+
+## Install ```Microsoft Windows``` fonts:
+Run ```dconf-editor```, search for ```automount``` and disable both results.
+```
+yay -S ttf-ms-win10-auto
+```
+Run ```dconf-editor``` and enable ```automount``` options.
+
+## Install ```OnlyOffice```:
+```
+yay -S onlyoffice-bin
+```
+
+## Install Mac OS theme:
+```
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+```
+```
+cd WhiteSur-gtk-theme
+```
+```
+sudo chmod +x ./install.sh | ./install.sh
+```
+```
+cd .. | rm -rf WhiteSur-gtk-theme
+```
