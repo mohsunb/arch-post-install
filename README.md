@@ -136,3 +136,16 @@ yay -S gdm-tools
 ```
 set-gdm-theme -s default LOCATION_OF_IMAGE
 ```
+
+# Playing ```Windows``` videogames the "unethical" way:
+```
+sudo pacman -S lutris wine wine-gecko wine-mono
+```
+* Open ```Lutris```.
+* Click the ```+``` icon at the top left corner.
+* From ```Game info```, click on ```Runner``` and select ```Wine```.
+* From ```Game options```, select the installer executable. Click on ```Wine prefix``` and select ```~/Lutris```.\
+* From ```System options```, click ```Default installation folder``` and select ```~/Lutris```. Save and click ```Play```.
+* Once the game is installed, change the executable to ```Redist``` contents and attempt to install them.
+* Finally, select the game executable and click ```Play```.
+**NOTE**: Repacks by ```Fitgirl``` cannot be installed as they require cophisticated archieving algorithms and cannot operate in ```Wine```.
