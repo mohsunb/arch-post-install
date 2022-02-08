@@ -105,3 +105,6 @@ sudo chmod +x ./install.sh | ./install.sh
 ```
 cd .. | rm -rf WhiteSur-gtk-theme
 ```
+```
+git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
+```
