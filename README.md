@@ -149,4 +149,5 @@ sudo pacman -S lutris wine wine-gecko wine-mono
 * Save and click ```Play```.
 * Once the game is installed, change the executable to ```Redist``` contents and attempt to install them.
 * Finally, select the game executable and click ```Play```.
-**NOTE**: Repacks by ```Fitgirl``` cannot be installed as they require cophisticated archieving algorithms and cannot operate in ```Wine```.
+
+# **NOTE**: Repacks by ```Fitgirl``` cannot be installed as they require cophisticated archieving algorithms and cannot operate in ```Wine```.
