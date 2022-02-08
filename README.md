@@ -122,9 +122,17 @@ git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
 ```
 Run ```Tweaks```, go to ```Appearance```. Click on ```Applications``` drop down menu and select ```WhiteSur-dark```. Click on ``Icons`` drop down menu and select ```La-Sierra```.
 
-## Advanced screenshot tool - Flameshot:
+## Advanced screenshot tool - ```Flameshot```:
 ```
 sudo pacman -S flameshot
 ```
 Open ```Settings```, ```Keyboard```. Click on ```View and Customize Shortcuts```. Click ```Screenshots``` and disable ```Print``` key function.
 Then create a custom shortcut for ```Print``` key which executes ```flameshot gui```.
+
+## Customize GDM login screen background:
+```
+yay -S gdm-tools
+```
+```
+set-gdm-theme -s default LOCATION_OF_IMAGE
+```
