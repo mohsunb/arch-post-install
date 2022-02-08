@@ -137,6 +137,17 @@ yay -S gdm-tools
 set-gdm-theme -s default LOCATION_OF_IMAGE
 ```
 
+## Fix for ```Keychron``` function keys:
+```
+echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+```
+echo "options hid_apple fnmode=0" | sudo tee -a /etc/modprobe.d/hid_apple.conf
+```
+```
+sudo mkinitcpio -P
+```
+
 # Playing ```Windows``` videogames the "unethical" way:
 ```
 sudo pacman -S lutris wine wine-gecko wine-mono
