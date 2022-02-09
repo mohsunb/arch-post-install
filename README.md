@@ -6,6 +6,14 @@ Open ```Settings```, go to ```Region and Language```, click ```Language``` and s
 ## Create a keyboard shortcut for Terminal:
 Open ```Settings```, ```Keyboard```. Click on ```View and Customize Shortcuts```. Create a custom shortcut of your choice which executes ```gnome-terminal```.
 
+## Install Bluetooth drivers:
+```
+sudo pacman -S bluez bluez-utils
+```
+```
+sudo systemctl enable bluetooth | sudo systemctl start bluetooth
+```
+
 ## Enable ```Multilib``` repository:
 Edit ```/etc/pacman.conf``` and uncomment:
 ```
