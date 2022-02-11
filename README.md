@@ -105,12 +105,12 @@ yay -S onlyoffice-bin
 
 ## Installing GNOME extensions:
 ```
-sudo pacman -S chrome-gnome-shell
+yay -S chrome-gnome-shell
 ```
 Go to https://extensions.gnome.org/ and install the browser extension. Then search for desired extensions and install them with the toggle.
 * Dash To Dock
 * Clipboard Indicator
-* Tray Icons
+* Tray Icons: Reloaded
 
 ## Install ```Mac OS``` theme and icons:
 ```
