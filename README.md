@@ -92,6 +92,9 @@ eval "$(starship init zsh)"
 ```
 
 ## Install ```Microsoft Windows``` fonts:
+```
+sudo pacman -S dconf-editor
+```
 Run ```dconf-editor```, search for ```automount``` and disable both results.
 ```
 yay -S ttf-ms-win10-auto
