@@ -11,7 +11,10 @@ Open ```Settings```, ```Keyboard```. Click on ```View and Customize Shortcuts```
 sudo pacman -S bluez bluez-utils
 ```
 ```
-sudo systemctl enable bluetooth | sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+'''
+'''
+sudo systemctl start bluetooth
 ```
 
 ## Enable ```Multilib``` repository:
@@ -61,7 +64,10 @@ cd yay
 makepkg -si
 ```
 ```
-cd .. | rm -rf yay
+cd ..
+'''
+'''
+rm -rf yay
 ```
 
 Now use ```yay -S PACKAGE_NAME``` to install AUR packages.
@@ -123,10 +129,16 @@ git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
 ```
 ```
-sudo chmod +x ./install.sh | ./install.sh
+sudo chmod +x ./install.sh
+'''
+'''
+./install.sh
 ```
 ```
-cd .. | rm -rf WhiteSur-gtk-theme
+cd ..
+'''
+'''
+rm -rf WhiteSur-gtk-theme
 ```
 ```
 git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
