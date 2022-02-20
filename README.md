@@ -29,7 +29,7 @@ WaylandEnable=false
 
 ## Install ```AMDGPU``` drivers:
 ```
-sudo pacman -S mesa xf86-video-amdpgu vulkan-radeon libva-mesa-driver mesa-vdpau
+sudo pacman -S mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver mesa-vdpau
 ```
 For 32-bit support:
 ```
