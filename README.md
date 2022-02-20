@@ -12,8 +12,8 @@ sudo pacman -S bluez bluez-utils
 ```
 ```
 sudo systemctl enable bluetooth
-'''
-'''
+```
+```
 sudo systemctl start bluetooth
 ```
 
@@ -65,8 +65,8 @@ makepkg -si
 ```
 ```
 cd ..
-'''
-'''
+```
+```
 rm -rf yay
 ```
 
@@ -130,14 +130,14 @@ cd WhiteSur-gtk-theme
 ```
 ```
 sudo chmod +x ./install.sh
-'''
-'''
+```
+```
 ./install.sh
 ```
 ```
 cd ..
-'''
-'''
+```
+```
 rm -rf WhiteSur-gtk-theme
 ```
 ```
