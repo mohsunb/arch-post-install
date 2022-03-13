@@ -176,17 +176,14 @@ echo "options hid_apple fnmode=0" | sudo tee -a /etc/modprobe.d/hid_apple.conf
 sudo mkinitcpio -P
 ```
 
-# Playing ```Windows``` videogames the "unethical" way:
+## If Steam breaks saying ```***libc.so.6*** no found```
+* Uninstall Steam
+* Delete ```~/.steam```, ```~/.steampath```, ```~/.steampid```, ```~/.local/share/Steam```;
+* Delete ```libc.so.6``` link:
 ```
-sudo pacman -S lutris wine wine-gecko wine-mono
+sudo rm -rf /usr/lib32/libc.so.6
 ```
-* Open ```Lutris```.
-* Click the ```+``` icon at the top left corner.
-* From ```Game info```, click on ```Runner``` and select ```Wine```.
-* From ```Game options```, select the installer executable. Click on ```Wine prefix``` and select ```~/Lutris```.
-* From ```System options```, click ```Default installation folder``` and select ```~/Lutris```.
-* Save and click ```Play```.
-* Once the game is installed, change the executable to ```Redist``` contents and attempt to install them.
-* Finally, select the game executable and click ```Play```.
-
-**NOTE**: Repacks by ```Fitgirl``` cannot be installed as they require sophisticated archiving algorithms and cannot operate in ```Wine```.
+* Reinstall the dependencies and then Steam:
+```
+sudo pacman -S glibc lib32-glibc
+```
