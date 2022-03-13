@@ -176,7 +176,7 @@ echo "options hid_apple fnmode=0" | sudo tee -a /etc/modprobe.d/hid_apple.conf
 sudo mkinitcpio -P
 ```
 
-## If Steam breaks saying ```libc.so.6 no found```
+## If Steam breaks saying ```libc.so.6 no found```:
 * Uninstall Steam
 * Delete ```~/.steam```, ```~/.steampath```, ```~/.steampid```, ```~/.local/share/Steam```;
 * Delete ```libc.so.6``` link:
