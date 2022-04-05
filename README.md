@@ -207,3 +207,8 @@ rm -r ~/.cache/thumbnails
 ```
 nautilus -q
 ```
+
+## Set up Java programming:
+```
+sudo pacman -S jre jdk code
+```
