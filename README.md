@@ -69,6 +69,12 @@ rm -rf yay
 
 Now use ```yay -S PACKAGE_NAME``` to install AUR packages.
 
+## MAKEPKG multithreading:
+Edit ```/etc/makepkg.conf``` and set:
+```
+MAKEFLAGS="-j$(nproc)"
+```
+
 ## Make terminal transparent:
 
 ```
