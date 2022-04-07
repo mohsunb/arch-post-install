@@ -1,8 +1,5 @@
 # Arch Linux Post-Installation Tweaks
 
-## Select a language if unable to open Terminal:
-Open ```Settings```, go to ```Region and Language```, click ```Language``` and select ```English```.
-
 ## Create a keyboard shortcut for Terminal:
 Open ```Settings```, ```Keyboard```. Click on ```View and Customize Shortcuts```. Create a custom shortcut of your choice which executes ```gnome-terminal```.
 
