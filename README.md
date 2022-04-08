@@ -1,9 +1,6 @@
 # Arch Linux Post-Installation Tweaks
 
-## Create a keyboard shortcut for Terminal:
-Open ```Settings```, ```Keyboard```. Click on ```View and Customize Shortcuts```. Create a custom shortcut of your choice which executes ```gnome-terminal```.
-
-## Install Bluetooth drivers:
+## Bluetooth:
 ```
 sudo pacman -S bluez bluez-utils
 ```
@@ -14,14 +11,14 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 ```
 
-## Enable ```Multilib``` repository:
+## ```Multilib``` repository:
 Edit ```/etc/pacman.conf``` and uncomment:
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
 
-## Switch ```Wayland``` to ```X11```:
+## **GNOME**: Switch ```Wayland``` to ```X11```:
 Edit ```/etc/gdm/custom.conf``` and uncomment:
 ```
 WaylandEnable=false
@@ -36,7 +33,7 @@ For 32-bit support:
 sudo pacman -S lib32-mesa lib32-vulkan-radeon lib32-libva-mesa-driver lib32-mesa-vdpau
 ```
 
-## Enable Variable Refresh Rate:
+## X11: Enable Variable Refresh Rate:
 Create ```/etc/X11/xorg.conf.d/20-amdgpu.conf``` and enter:
 ```
 Section "Device"
@@ -46,7 +43,7 @@ Section "Device"
 EndSection
 ```
 
-## Install ```AUR``` packages:
+## ```AUR``` helper:
 ```
 sudo pacman -S base-devel
 ```
@@ -67,23 +64,13 @@ cd ..
 rm -rf yay
 ```
 
-Now use ```yay -S PACKAGE_NAME``` to install AUR packages.
-
 ## MAKEPKG multithreading:
 Edit ```/etc/makepkg.conf``` and set:
 ```
 MAKEFLAGS="-j$(nproc)"
 ```
 
-## Make terminal transparent:
-
-```
-yay -S gnome-terminal-transparency
-```
-
-Open ```Terminal```. Click three dots, ```Preferences```. Select your profile. Go to ```Colors``` and tick ```Transparent background```. Use the slider to adjust transparency.
-
-## Install ```Z-Shell```, ```Oh-My-Zsh``` and ```Starship Prompt```:
+## Custom shell:
 ```
 sudo pacman -S zsh
 ```
@@ -100,7 +87,7 @@ eval "$(starship init zsh)"
 
 ```
 
-## Install ```Microsoft Windows``` fonts:
+## ```Windows``` fonts:
 ```
 sudo pacman -S dconf-editor
 ```
@@ -110,21 +97,16 @@ yay -S ttf-ms-win10-auto
 ```
 Run ```dconf-editor``` and enable ```automount``` options.
 
-## Install ```OnlyOffice```:
-```
-yay -S onlyoffice-bin
-```
-
-## Installing GNOME extensions:
+## GNOME extensions:
 ```
 yay -S chrome-gnome-shell
 ```
-Go to https://extensions.gnome.org/ and install the browser extension. Then search for desired extensions and install them with the toggle.
+https://extensions.gnome.org/
 * Dash To Dock
 * Clipboard Indicator
 * Tray Icons: Reloaded
 
-## Install ```Mac OS``` theme and icons:
+## GNOME: ```Mac OS``` theme:
 ```
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 ```
@@ -145,12 +127,6 @@ rm -rf WhiteSur-gtk-theme
 ```
 ```
 git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
-```
-Run ```Tweaks```, go to ```Appearance```. Click on ```Applications``` drop down menu and select ```WhiteSur-dark```. Click on ``Icons`` drop down menu and select ```La-Sierra```.
-
-## Slideshow wallpapers:
-```
-sudo pacman -S shotwell
 ```
 
 ## Advanced screenshot tool - ```Flameshot```:
@@ -191,7 +167,7 @@ sudo rm -rf /usr/lib32/libc.so.6
 sudo pacman -S glibc lib32-glibc
 ```
 
-## Better thumbnails and fix broken ones:
+## Better thumbnails:
 ```
 yay -S ffmpegthumbnailer
 ```
@@ -206,12 +182,8 @@ MimeType=application/mxf;application/ogg;application/ram;application/sdp;applica
 ```
 rm -r ~/.cache/thumbnails
 ```
-* Restart Nautilus:
-```
-nautilus -q
-```
 
 ## Set up Java programming:
 ```
-sudo pacman -S jre jdk code
+yay -S jre jdk code
 ```
