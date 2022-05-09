@@ -18,10 +18,44 @@ Edit ```/etc/pacman.conf``` and uncomment:
 Include = /etc/pacman.d/mirrorlist
 ```
 
+## ```Alacritty``` Wayland launch command:
+```
+env WAYLAND_DISPLAY=alacritty alacritty
+```
+
+## Switch ```sudo``` to ```doas```:
+```
+yay -S opendoas
+```
+Create ```/etc/doas.conf``` and enter: (must end with a newline)
+```
+permit persist :wheel
+
+```
+```
+sudo chown -c root:root /etc/doas.conf
+```
+```
+sudo chmod -c 0400 /etc/doas.conf
+```
+Create aliases:
+```
+alias sudo='doas'
+alias sudoedit='doas rnano'
+```
+
 ## **GNOME**: Switch ```Wayland``` to ```X11```:
 Edit ```/etc/gdm/custom.conf``` and uncomment:
 ```
 WaylandEnable=false
+```
+
+## CPU microcode update:
+```
+sudo pacman -S amd-ucode
+```
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Install ```AMDGPU``` drivers:
@@ -93,7 +127,7 @@ sudo pacman -S dconf-editor
 ```
 Run ```dconf-editor```, search for ```automount``` and disable both results.
 ```
-yay -S ttf-ms-win10-auto
+yay -S ttf-ms-win11-auto
 ```
 Run ```dconf-editor``` and enable ```automount``` options.
 
@@ -104,7 +138,7 @@ yay -S chrome-gnome-shell
 https://extensions.gnome.org/
 * Dash To Dock
 * Clipboard Indicator
-* Tray Icons: Reloaded
+* Tray Icons
 
 ## GNOME: ```Mac OS``` theme:
 ```
@@ -129,7 +163,13 @@ rm -rf WhiteSur-gtk-theme
 git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
 ```
 
+## Gnome Shell 42>= slideshow:
+```
+sudo pacman -S variety
+```
+
 ## Advanced screenshot tool - ```Flameshot```:
+Note: Doesn't work on Gnome, Wayland. Works on KDE, Wayland, but buggy.
 ```
 sudo pacman -S flameshot
 ```
@@ -185,5 +225,5 @@ rm -r ~/.cache/thumbnails
 
 ## Set up Java programming:
 ```
-yay -S jre jdk code
+yay -S jre jdk jetbrains-toolbox
 ```
