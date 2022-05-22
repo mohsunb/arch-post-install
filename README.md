@@ -1,24 +1,6 @@
 # Arch Linux Post-Installation Tweaks
 
-## Bluetooth:
-```
-sudo pacman -S bluez bluez-utils
-```
-```
-sudo systemctl enable bluetooth
-```
-```
-sudo systemctl start bluetooth
-```
-
-## ```Multilib``` repository:
-Edit ```/etc/pacman.conf``` and uncomment:
-```
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-```
-
-## ```Alacritty``` Wayland launch command:
+## ```Alacritty``` Wayland launch command (GNOME Shell):
 ```
 env WAYLAND_DISPLAY=alacritty alacritty
 ```
@@ -44,7 +26,7 @@ alias sudo='doas'
 alias sudoedit='doas rnano'
 ```
 
-## **GNOME**: Switch ```Wayland``` to ```X11```:
+## **GNOME Shell**: Switch ```Wayland``` to ```X11```:
 Edit ```/etc/gdm/custom.conf``` and uncomment:
 ```
 WaylandEnable=false
@@ -113,15 +95,14 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 ```
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-
 ```
 Edit ```~/.zshrc``` and append:
 ```
 eval "$(starship init zsh)"
-
 ```
 
 ## ```Windows``` fonts:
+Note: disabling ```automount``` is only necessary on GNOME Shell.
 ```
 sudo pacman -S dconf-editor
 ```
@@ -131,7 +112,7 @@ yay -S ttf-ms-win11-auto
 ```
 Run ```dconf-editor``` and enable ```automount``` options.
 
-## GNOME extensions:
+## GNOME Shell extensions:
 ```
 yay -S chrome-gnome-shell
 ```
@@ -140,7 +121,7 @@ https://extensions.gnome.org/
 * Clipboard Indicator
 * Tray Icons
 
-## GNOME: ```Mac OS``` theme:
+## GNOME Shell: ```Mac OS``` theme:
 ```
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 ```
@@ -163,7 +144,7 @@ rm -rf WhiteSur-gtk-theme
 git clone https://github.com/btd1337/La-Sierra-Icon-Theme ~/.icons/La-Sierra
 ```
 
-## Gnome Shell 42>= slideshow:
+## GNOME Shell 42>= slideshow:
 ```
 sudo pacman -S variety
 ```
@@ -207,7 +188,7 @@ sudo rm -rf /usr/lib32/libc.so.6
 sudo pacman -S glibc lib32-glibc
 ```
 
-## Better thumbnails:
+## Better thumbnails (GNOME Shell):
 ```
 yay -S ffmpegthumbnailer
 ```
@@ -221,9 +202,4 @@ MimeType=application/mxf;application/ogg;application/ram;application/sdp;applica
 * Clear all thumbnails:
 ```
 rm -r ~/.cache/thumbnails
-```
-
-## Set up Java programming:
-```
-yay -S jre jdk jetbrains-toolbox
 ```
