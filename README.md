@@ -203,3 +203,15 @@ MimeType=application/mxf;application/ogg;application/ram;application/sdp;applica
 ```
 rm -r ~/.cache/thumbnails
 ```
+
+## Firefox Wayland:
+* Edit ```/etc/environment``` and enter:
+```
+MOX_ENABLE_WAYLAND=1
+```
+
+## Discord Wayland:
+* Edit application icon and enter:
+```
+Exec="/usr/bin/discord" --enable-features=UseOzonePlatform --ozone-platform=wayland
+```
