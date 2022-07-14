@@ -25,6 +25,10 @@ Create aliases:
 alias sudo='doas'
 alias sudoedit='doas rnano'
 ```
+Make ```yay``` use ```doas```:
+```
+yay --sudo doas --save
+```
 
 ## **GNOME Shell**: Switch ```Wayland``` to ```X11```:
 Edit ```/etc/gdm/custom.conf``` and uncomment:
@@ -215,3 +219,9 @@ MOX_ENABLE_WAYLAND=1
 ```
 Exec="/usr/bin/discord" --enable-features=UseOzonePlatform --ozone-platform=wayland
 ```
+
+## ```Dolphin``` video thumbnails:
+```
+sudo pacman -S ffmpegthumbs
+```
+Go to Dolphin Settings > Configure Dolphin > General > Previews > Tick ```Video Files (ffmpegthumbs)```.
