@@ -225,3 +225,13 @@ Exec="/usr/bin/discord" --enable-features=UseOzonePlatform --ozone-platform=wayl
 sudo pacman -S ffmpegthumbs
 ```
 Go to Dolphin Settings > Configure Dolphin > General > Previews > Tick ```Video Files (ffmpegthumbs)```.
+
+## ```tar``` arguments:
+* For ```gzip``` compression:
+```
+tar -cvzf file_name.tar.gz DIRECTORY_NAME
+```
+* For extracting:
+```
+tar -xf file_name.tar.gz
+```
