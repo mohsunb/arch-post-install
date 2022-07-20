@@ -1,5 +1,29 @@
 # Arch Linux Post-Installation Tweaks
 
+# Table of contents:
+* [Alacritty Gnome Wayland](#alacritty-wayland-launch-command-gnome-shell)
+* [doas](#switch-sudo-to-doas)
+* [Gnome Wayland](#gnome-shell-switch-wayland-to-x11)
+* [CPU uCode](#cpu-microcode-update)
+* [AMDGPU](#install-amdgpu-drivers)
+* [X11 VRR](#x11-enable-variable-refresh-rate)
+* [YAY](#aur-helper)
+* [AUR SMT](#makepkg-multithreading)
+* [Shell](#custom-shell)
+* [Win font](#windows-fonts)
+* [Gnome addons](#gnome-shell-extensions)
+* [Gnome Mac OS](#gnome-shell-mac-os-theme)
+* [Gnome slideshow](#gnome-shell-42-slideshow)
+* [Flameshot](#advanced-screenshot-tool---flameshot)
+* [Customize GDM](#customize-gdm-login-screen-background)
+* [Keychron FN](#fix-for-keychron-function-keys)
+* [Steam libc error](#if-steam-breaks-saying-libcso6-no-found)
+* [Gnome thumbnails](#better-thumbnails-gnome-shell)
+* [Firefox Wayland](#firefox-wayland)
+* [Discord Wayland](#discord-wayland)
+* [Dolphin thumbnails](#dolphin-video-thumbnails)
+* [tar/gzip](#tar-arguments)
+
 ## ```Alacritty``` Wayland launch command (GNOME Shell):
 ```
 env WAYLAND_DISPLAY=alacritty alacritty
